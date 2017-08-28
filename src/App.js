@@ -18,6 +18,11 @@ import './App.css';
 import BookList from './componets/books/bookList';
 import Movie from './componets/movie/movie';
 import Search from './componets/search/search';
+import TestList from './componets/test-list';
+import TestSelected from './componets/test-selected';
+
+
+
 import axios from 'axios';
 
 //Data
@@ -87,9 +92,12 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <TestList />
+                <TestSelected/>
                 <Header name="Header" movieSearch={this.movieSearch.bind(this)}/>
                 <MainContent name="MainContent" response={this.state.movie}/>
                 <Footer name="Foooter"/>
+
             </div>
         );
     }
